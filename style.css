@@ -2,9 +2,11 @@
 *** GENERAL
 **********************************************/
 
+div.content { width: 100% }
+
 * {
-    margin: 0;
-    padding: 0;
+    margin: 10;
+    padding: 10;
     box-sizing: border-box;
 }
 
@@ -150,9 +152,21 @@ body {
 }
 
 .add__description { width: 400px;}
-.add__value { width: 100px;}
+.add__value { width: 125px;}
 
 .add__btn {
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #28B9B5;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+
+.add__btn1 {
     font-size: 35px;
     background: none;
     border: none;

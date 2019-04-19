@@ -8,7 +8,7 @@
         <title>Budgety</title>
     </head>
     <body>
-        
+        <div class="content">
         <div class="top">
             <div class="budget">
                 <div class="budget__title">
@@ -44,11 +44,18 @@
                         <option value="inc" selected>+</option>
                         <option value="exp">-</option>
                     </select>
-                    <input type="text"  name="description" class="add__description" placeholder="Add description">
-                    <input type="number" name="value" class="add__value" placeholder="Value">
 
-                    <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
-                  
+                    <input type="text" name="description" class="add__description" placeholder="Add description" maxlength="25">
+                    <!-- <input type="number" name="value" class="add__value" placeholder="Value" min = "0" max = "999999" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    type = "number" maxlength = "6" onkeydown="javascript: return event.keyCode == 69 ? false : true" required />
+                    -->
+                    
+                    <input type="number" name="value" class="add__value" placeholder="Value" maxlength = "6" >
+
+                    <button id="start-record-btn" title="Start Recording" class="add__btn1"><i class="ion-ios-mic"></i></button>
+                    <button id="pause-record-btn" title="Pause Recording" class="add__btn1"><i class="ion-ios-pause-outline"></i></button>
+                    <button id="add__btn" class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+
                     <button id="german" class="add__btn"><img src="germany.gif"  title="German" alt="German"></button>
                     <button id="ukrainian" class="add__btn"><img src="ukrainian.jpg" title="Ukrainian" alt="Ukrainian"></button>
                     <button id="english" class="add__btn"><img src="english.jpg" title="English" alt="English"></button> 
@@ -59,7 +66,6 @@
                     <button id="chinese" class="add__btn"><img src="chinise.gif" title="Chinese" alt="Chinese"></button>
                     <button id='save__btn' class="add__btn"><i class="ion-ios-cloud-download"></i></button>
                     <button id='load__btn' class="add__btn"><i class="ion-ios-cloud-upload"></i></button>
-
                 </div>
             </div>
             
@@ -67,7 +73,7 @@
                 <div class="income">
                     <h2 class="income__title">Income</h2>
                     
-                    <div class="income__list clearfix">
+                    <div class="income__list">
                        
                         <!--
                         <div class="item clearfix" id="income-0">
@@ -133,6 +139,7 @@
             
             
         </div>
+    </div>
         <script src="jquery-3.3.1.min.js"></script>
         <script src="app.js"></script>
     </body>
